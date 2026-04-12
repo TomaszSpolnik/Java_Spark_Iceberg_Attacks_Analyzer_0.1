@@ -1,0 +1,125 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "acdcb99b-a6f1-49a6-ad7c-5b7358f5f602",
+  "location" : "/home/szeptuch/IdeaProjects/spark_iceberg/data/warehouse/threat_db/threat_events",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1776003677159,
+  "last-column-id" : 11,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "source_ip",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "attack_type",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "malware_family",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 4,
+      "name" : "decoded_payload",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 5,
+      "name" : "extracted_urls",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 6,
+      "name" : "extracted_ips",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 7,
+      "name" : "raw_extracted",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 8,
+      "name" : "has_payload",
+      "required" : false,
+      "type" : "boolean"
+    }, {
+      "id" : 9,
+      "name" : "url_count",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 10,
+      "name" : "ip_count",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 11,
+      "name" : "etl_timestamp",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "attack_type",
+      "transform" : "identity",
+      "source-id" : 2,
+      "field-id" : 1000
+    } ]
+  } ],
+  "last-partition-id" : 1000,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "szeptuch",
+    "write.format.default" : "parquet",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 6622343693493534380,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 6622343693493534380,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 6622343693493534380,
+    "timestamp-ms" : 1776003677159,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1776003672051",
+      "added-data-files" : "8",
+      "added-records" : "166",
+      "added-files-size" : "35332",
+      "changed-partition-count" : "8",
+      "total-records" : "166",
+      "total-files-size" : "35332",
+      "total-data-files" : "8",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/szeptuch/IdeaProjects/spark_iceberg/data/warehouse/threat_db/threat_events/metadata/snap-6622343693493534380-1-a22497be-9e10-41d6-bec1-b30ed42b961b.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1776003677159,
+    "snapshot-id" : 6622343693493534380
+  } ],
+  "metadata-log" : [ ]
+}

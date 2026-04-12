@@ -1,0 +1,90 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "4aefd999-1098-4970-82bf-6014c782ac83",
+  "location" : "/home/szeptuch/IdeaProjects/spark_iceberg/data/warehouse/threat_db/blacklist_ips",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1776003677781,
+  "last-column-id" : 4,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "ip_address",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "threat_level",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "source",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 4,
+      "name" : "etl_timestamp",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "threat_level",
+      "transform" : "identity",
+      "source-id" : 2,
+      "field-id" : 1000
+    } ]
+  } ],
+  "last-partition-id" : 1000,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "szeptuch",
+    "write.format.default" : "parquet",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 5798206207813977658,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 5798206207813977658,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 5798206207813977658,
+    "timestamp-ms" : 1776003677781,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1776003672051",
+      "added-data-files" : "2",
+      "added-records" : "204",
+      "added-files-size" : "4391",
+      "changed-partition-count" : "2",
+      "total-records" : "204",
+      "total-files-size" : "4391",
+      "total-data-files" : "2",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "/home/szeptuch/IdeaProjects/spark_iceberg/data/warehouse/threat_db/blacklist_ips/metadata/snap-5798206207813977658-1-7bee8106-8ed8-4320-8c52-9eb8e8e4a37b.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1776003677781,
+    "snapshot-id" : 5798206207813977658
+  } ],
+  "metadata-log" : [ ]
+}
