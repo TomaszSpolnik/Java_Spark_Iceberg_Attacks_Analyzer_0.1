@@ -12,9 +12,9 @@ Parser payloadów, klasyfikator ataków, ekstrakcja IP/URL do blacklisty i zapis
  */
 
  Output własnego pliku z zagrożeniami (zalecany widok CODE):
-
- ╔══════════════════════════════════════════════════════╗
-║           RAPORT ANALIZY ZAGROZEN                   ║
+ 
+╔══════════════════════════════════════════════════════╗
+║           RAPORT ANALIZY ZAGROZEN                    ║
 ╚══════════════════════════════════════════════════════╝
 
  1. TYPY ATAKOW
