@@ -11,6 +11,9 @@ Parser payloadów, klasyfikator ataków, ekstrakcja IP/URL do blacklisty i zapis
 
  */
 
+ Schemat dla własnej CSV'ki:
+ IP atakującego, Data Payload, ekstrakt ip/url z Data Payload (ewentualnie)
+ Dla re-runa na własnym środowisku trzeba usunąć folder /warehouse
  Output własnego pliku z zagrożeniami (zalecany widok CODE):
  
 ╔══════════════════════════════════════════════════════╗
