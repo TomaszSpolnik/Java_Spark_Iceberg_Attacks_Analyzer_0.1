@@ -1,4 +1,4 @@
-Napisany z pomocą dostępnych mi narzędzi parser payloadów, klasyfikator ataków, ekstrakcja IP/URL do blacklisty i zapis do Iceberg.
+Napisany z pomocą dostępnych mi narzędzi (claude, chatgpt) parser payloadów, klasyfikator ataków i ekstrakor IP/URL do blacklisty z użyciem Iceberg.
 
 /**
  * Punkt wejscia — analiza zagrozen z pliku CSV.
@@ -12,8 +12,10 @@ Napisany z pomocą dostępnych mi narzędzi parser payloadów, klasyfikator atak
  */
 
  Schemat dla własnej CSV'ki:
- IP atakującego, Data Payload, ekstrakt ip/url z Data Payload (ewentualnie)
- Dla re-runa na własnym środowisku trzeba usunąć folder /warehouse
+ IP atakującego, Data Payload (HEX +/ plaintext) , ekstrakt ip/url z Data Payload (opcjonalne).
+ 
+ Dla re-runa na własnym środowisku trzeba usunąć folder /WAREHOUSE (zostawiłem celu demonstracyjnym).
+ 
  Output własnego pliku z zagrożeniami (zalecany widok CODE):
  
 ╔══════════════════════════════════════════════════════╗
