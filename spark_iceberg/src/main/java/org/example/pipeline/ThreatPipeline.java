@@ -187,7 +187,7 @@ public class ThreatPipeline {
         spark.sql(
             "SELECT ip_address, threat_level, source " +
             "FROM local_catalog.threat_db.blacklist_ips " +
-            "ORDER BY threat_level DESC, ip_address LIMIT 20"
+            "ORDER BY threat_level DESC, ip_address" //usunięcie limitu do 20
         ).show(false);
 
         System.out.println(" 4. BLACKLISTA URL — serwery C2 i download");
@@ -210,7 +210,7 @@ public class ThreatPipeline {
             "SELECT source_ip, attack_type, malware_family, ip_count, url_count " +
             "FROM local_catalog.threat_db.threat_events " +
             "WHERE ip_count > 0 OR url_count > 0 " +
-            "ORDER BY ip_count DESC, url_count DESC LIMIT 15"
+            "ORDER BY ip_count DESC, url_count DESC" //usunięcie limitu do 15
         ).show(false);
     }
 }
