@@ -1,4 +1,4 @@
-Parser payloadów, klasyfikator ataków, ekstrakcja IP/URL do blacklisty i zapis do Iceberg.
+Napisany z pomocą dostępnych mi narzędzi parser payloadów, klasyfikator ataków, ekstrakcja IP/URL do blacklisty i zapis do Iceberg.
 
 /**
  * Punkt wejscia — analiza zagrozen z pliku CSV.
