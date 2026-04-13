@@ -183,7 +183,7 @@ public class ThreatPipeline {
             "GROUP BY malware_family ORDER BY infected_sources DESC"
         ).show(false);
 
-        System.out.println(" 3. BLACKLISTA IP (pierwsze 20, posortowane po poziomie zagrozenia)");
+        System.out.println(" 3. BLACKLISTA IP (posortowane po poziomie zagrozenia)");
         spark.sql(
             "SELECT ip_address, threat_level, source " +
             "FROM local_catalog.threat_db.blacklist_ips " +
